@@ -112,7 +112,7 @@ public class function {
     }
 
     
-    public static void main(String[] args) {
+    public static void main(StringClass[] args) {
         
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter a number n :");
