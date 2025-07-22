@@ -37,15 +37,47 @@ public class Arrays {
         }
         return -1;
     }
+    public static void printArr(int arr[]){
+        for(int i =0; i< arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+
+        static final int MOD = 1000000007;
+
+    public static int[] getProductArrayExceptSelf(int[] arr) {
+        int n = arr.length;
+        int[] result = new int[n];
+
+        if (n == 0) return result;
+
+        // Step 1: Compute prefix product
+        result[0] = 1;
+        for (int i = 1; i < n; i++) {
+            result[i] = (int)(((long)result[i - 1] * arr[i - 1]) % MOD);
+        }
+
+        // Step 2: Compute suffix product on the fly and multiply
+        long suffix = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            result[i] = (int)((result[i] * suffix) % MOD);
+            suffix = (suffix * arr[i]) % MOD;
+        }
+
+        return result;
+    }
     public static void main (String args[]){
         //HOW TO CREATE ARRAY
         // int marks[] = new int[50];
-        // int numbers[] = {1,2,2,3,};
+        int numbers[] = {1,2,2,3};
+        getProductArrayExceptSelf(numbers);
+        printArr(numbers);
 
-        String names[] = {"HariKishor" , "Radhe", "Dilkhush", "Manish", "Rajiv", "hero"};
+        // String names[] = {"HariKishor" , "Radhe", "Dilkhush", "Manish", "Rajiv", "hero"};
 
         Scanner Sc = new Scanner(System.in);
-        System.out.println("Enter your Key : ");
+        // System.out.println("Enter your Key : ");
         // String key = Sc.next();
 
         // int key = Sc.nextInt();
@@ -75,12 +107,12 @@ public class Arrays {
         // System.out.println("the Smallest valu of arr is :"+ SmallestInArray(arr)  );
          
 
-         int index = findname(names, "hero");
-        if(index == -1){
-            System.out.println("NOT FOUND");
-        }else{
-            System.out.println( " Hero is Avalibal on " + index  );
-        }
+        //  int index = findname(names, "hero");
+        // if(index == -1){
+        //     System.out.println("NOT FOUND");
+        // }else{
+        //     System.out.println( " Hero is Avalibal on " + index  );
+        // }
 
         Sc.close();
     }
