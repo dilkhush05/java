@@ -16,21 +16,22 @@ Here, I am continuously adding Java solutions to common algorithmic problems, co
 
 ## 🗂️ Folder Structure
 
-
-Each folder (`DayXX`) represents problems added on that particular day.
-
+.
+├── AllSortingTechnique/        # Implements various sorting algorithms
+├── AssimentQuestion/          # Sample assignment-style problems
+├── inportantQue/              # Important question practice sets
+├── Arrays.java                # Array manipulation examples
+├── BinarySearch.java          # Binary search implementation
+├── Matrix.java                # Matrix operations (add, multiply, transpose, etc.)
+├── Patterns.java              # ASCII-art pattern printing
+├── StringClass.java           # String handling examples
+├── SubArrays.java             # Working with subarrays
+├── function.java              # Basic function usage
+├── functionPracticeSet.java   # Function practice exercises
+├── loops.java                 # Examples of loops (for, while)
+└── tempCodeRunnerFile.java    # Testing ground for miscellaneous snippets
 ---
 
-## 📅 Daily Tracker
-
- Topics Covered :            | Status  |
-
- -> Array Reversal, Min/Max  | ✅ Done |
- ->Bubble Sort, Selection    | ✅ Done |
- ->Matrix Problems           | ✅ Done |
- ->Coming soon...            | ⏳ Pending |
-
----
 
 ## 💻 How to Use
 
