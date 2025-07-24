@@ -30,7 +30,7 @@ public class BitManipulation {
        
         return (n&Bitmask);
     }
-      public static void UpdateIthBit(int n, int i,int newBit){
+    public static void UpdateIthBit(int n, int i,int newBit){
         // int Bitmask = ~(1 << i);
         
         n = ClearithBit(n, i);
@@ -41,6 +41,23 @@ public class BitManipulation {
     public static int ClearlastIbits(int n, int  i){
         int bitmask = (~0) << i;
         return n & bitmask;
+    }
+
+
+    public static Boolean PowerOfTwo(int n ){
+        return (n & (n-1)) == 0;
+    } 
+
+
+    public static void SetBitCount(int n ){
+        int count = 0;
+        while( n > 0){
+            if((n & 1 ) != 0){
+                count++;
+            }
+            n = n>> 1;
+        }
+       System.out.print(count);
     }
     public static void main(String[] args) {
      // Bitwise AND &
@@ -76,11 +93,12 @@ public class BitManipulation {
     
 
 
-    UpdateIthBit(10,2,0);
+    // UpdateIthBit(10,2,0);
+    // System.out.println(ClearlastIbits(15, 2));
 
-    System.out.println(ClearlastIbits(15, 2));
+    //   System.out.println(PowerOfTwo(1));  
 
-
+    // SetBitCount(16);
 
 
     }
