@@ -6,17 +6,17 @@ public class Coolpairs {
         int count = 0;
 
         // Step 1: Filter elements that have all bits of X
-        // List<Integer> filtered = new ArrayList<>();
-        // for (int num : arr) {
-        //     if ((num & X) == X) {
-        //         filtered.add(num);
-        //     }
-        // }
+        List<Integer> filtered = new ArrayList<>();
+        for (int num : arr) {
+            if ((num & X) == X) {
+                filtered.add(num);
+            }
+        }
 
         // Step 2: Check pairs
-        for (int i = 0; i < arr.size(); i++) {
-            for (int j = i + 1; j < arr.size(); j++) {
-                if ((arr.get(i) & arr.get(j)) == X) {
+        for (int i = 0; i < filtered.size(); i++) {
+            for (int j = i + 1; j < filtered.size(); j++) {
+                if ((filtered.get(i) & filtered.get(j)) == X) {
                     count++;
                 }
             }
@@ -37,4 +37,4 @@ public class Coolpairs {
     }
 }
 
-// 5, 1, 5, 7, 3
+5, 1, 5, 7, 3
