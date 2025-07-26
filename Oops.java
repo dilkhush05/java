@@ -1,11 +1,11 @@
 
 public class Oops{
     public static void main(String[] args) {
-        Pan P1 = new Pan();
-            P1.setColour("RED");
+        // Pan P1 = new Pan();
+        //     P1.setColour("RED");
             
-            P1.setTip(5);
-            System.out.println(P1.getColour() + "\n" + P1.getTip());
+        //     P1.setTip(5);
+        //     System.out.println(P1.getColour() + "\n" + P1.getTip());
 
         // BankAccount MyAcc = new BankAccount();
         // MyAcc.Username = "asdfghhth";
@@ -13,6 +13,10 @@ public class Oops{
         // // MyAcc.password = "asdfghhth";
 
         // System.out.println(MyAcc.Username);
+
+        Student S1 = new Student("Abhishek");
+        // S1.name = "Abhishek";
+        System.out.println(S1.name);
 
     }
 }
@@ -26,6 +30,16 @@ public class Oops{
 //     }
 
 // }
+
+class Student{
+    String  name;
+    int roll;
+
+    Student(String name ){
+        // System.out.println("Constructor is called: ");
+        this.name =  name ;
+    }
+}
 class Pan {
     private String Colour;
     private int tip;
