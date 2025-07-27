@@ -81,6 +81,39 @@ public class Recursion {
         }
         return n * powerOfN(x, n - 1);
     }
+
+    public static int tailingProblem(int n){
+        // base case
+
+        if(n == 0 || n ==1){
+            return 1;
+        }
+
+        //vertically check 
+        int vertically = tailingProblem( n -1);
+
+        //HORIGENTAILLY check
+        int HORIGENTAILLY = tailingProblem(n - 2);
+
+        return vertically + HORIGENTAILLY;
+    }
+
+    public static void duplicateString (String Str, int idx , StringBuilder newStr,boolean arr[]){
+        //base case 
+        if(idx == Str.length()){
+            System.out.println(newStr);
+            return;
+        }
+
+        char newCurr = Str.charAt(idx);
+        if(arr[newCurr - 'a'] == true){
+            duplicateString(Str, idx+1, newStr, arr);
+        }else{
+            arr[newCurr - 'a' ] = true;
+            duplicateString(Str, idx +1 , newStr.append(newCurr), arr);
+            
+        }
+    }
     public static void main(String[] args) {
         int n = 5;
         // printincreasingnum(n);
@@ -95,7 +128,12 @@ public class Recursion {
 
         // System.out.println(lastOccarence(arr, 2, 5));
 
-        System.out.println(powerOfN(2, 5));
+        // System.out.println(powerOfN(2, 5));
+
+        // System.out.println(tailingProblem(4));
+
+    String Str = "aappnaacollegge";
+duplicateString(Str, 0, new StringBuilder(""), new boolean[26]);
 
     }
 }
