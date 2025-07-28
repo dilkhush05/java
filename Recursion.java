@@ -1,3 +1,5 @@
+import javax.swing.SingleSelectionModel;
+
 public class Recursion {
     public static void printDecrisingnum(int n ){
         System.out.print(n + " " );
@@ -114,6 +116,48 @@ public class Recursion {
             
         }
     }
+
+    public static int frindsPairing(int n){
+        if(n == 1 || n ==2){
+            return n;
+        }
+        // Single
+
+        int singl = frindsPairing(n -1 );
+        //for double
+        int doublepairing =frindsPairing(n -2);
+
+        return singl + (n -1) * doublepairing;
+    }
+
+    //Congecative Ones
+    public static void binaryStringProb(int n , int lstplace ,String str){
+        if(n == 0){
+            System.out.println(str);
+            return;
+        }
+        //kaam
+        binaryStringProb(n -1, 0, str+"0");
+
+        if(lstplace == 0){
+            binaryStringProb(n -1, 1, str+"1");
+        }
+    }
+
+    //congicative Zeros 
+      public static void binaryStringProbamZeros(int n , int lstplace ,String str){
+        if(n == 0){
+            System.out.println(str);
+            return;
+        }
+        //kaam
+        binaryStringProbamZeros(n -1, 1, str+"1");
+
+        if(lstplace == 1){
+            binaryStringProbamZeros(n -1, 0, str+"0");
+        }
+    }
+
     public static void main(String[] args) {
         int n = 5;
         // printincreasingnum(n);
@@ -132,8 +176,14 @@ public class Recursion {
 
         // System.out.println(tailingProblem(4));
 
-    String Str = "aappnaacollegge";
-duplicateString(Str, 0, new StringBuilder(""), new boolean[26]);
+    // String Str = "aappnaacollegge";
+// duplicateString(Str, 0, new StringBuilder(""), new boolean[26]);
+
+        //  System.out.println(frindsPairing(3));
+        // binaryStringProb(3, 1, "");
+
+        binaryStringProbamZeros(3,1,"");
+
 
     }
 }
