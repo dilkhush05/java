@@ -86,6 +86,23 @@ public class SubArrays {
         System.out.println("The Total number of sum: " + n);
     }
 
+       public static int numberofSubarrays(int n, int[] arr) {
+        long result = 0;
+        int count = 1; // to count consecutive elements
+
+        for (int i = 1; i <= n; i++) {
+            if (i < n && arr[i] == arr[i - 1]) {
+                count++;
+            } else {
+                // Add number of subarrays for this segment
+                result += (long) count * (count + 1) / 2;
+                count = 1; // reset for next segment
+            }
+        }
+
+        return (int) result;
+    }
+
 
 // its a optimise approach ; time com : O(n); space com O(1)
     public static void MaxSumAray2UsingKadans(int arr[]){
