@@ -29,7 +29,7 @@ static int count =0;
         //base case 
         if(row == board.length){
            
-            // BoardPrint(board);
+            BoardPrint(board);
             count++;
             return ;
         }
@@ -56,7 +56,7 @@ static int count =0;
         }
     }
     public static void main(String[] args) {
-        int n = 10;
+        int n = 4;
         char board[][] = new char[n][n];
 
         for(int i = 0; i< board.length; i++){
