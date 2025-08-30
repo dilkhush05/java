@@ -136,10 +136,11 @@ public class SubArrays {
 
     public static void main(StringClass args[]){
         int Arr[] = {1,-2,6,-1,4};
+        SubArray1(Arr);
         // SubArray1(Arr);
         // MaxSumAray2(Arr);
         // MaxSumAray(Arr);
-        MaxSumAray2UsingKadans1(Arr);
+        // MaxSumAray2UsingKadans1(Arr);
 
     }
 }
