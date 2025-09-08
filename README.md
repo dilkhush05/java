@@ -1,40 +1,54 @@
 # Java Algorithms & Problem Solving
 
-Welcome to my Java-based algorithm and data structure repository! 🚀  
-Here, I am continuously adding Java solutions to common algorithmic problems, coding challenges, and DSA (Data Structures & Algorithms) topics, **day by day**.
+Repository of Java algorithms, data-structure examples and small practice programs. Files are organized for learning and quick testing on a Windows machine.
 
----
+## What’s included
+- Daily-added Java solutions for algorithms and DSA topics.
+- Small runnable examples (each with a `main` when applicable).
+- Simple utilities and practice problems.
 
-## 📌 What You’ll Find
+## Project layout (root)
+- AllSortingTechnique/        # Sorting & linked-list implementations (e.g., MargeLinkedList.java)
+- AssimentQuestion/           # Assignment-style problems
+- inportantQue/               # Important question practice sets
+- Arrays.java
+- BinarySearch.java
+- Matrix.java
+- Patterns.java
+- StringClass.java
+- SubArrays.java
+- function.java
+- functionPracticeSet.java
+- loops.java
+- tempCodeRunnerFile.java
+- StackWithArrayList.java     # Stack implementation using ArrayList
+- QueueImpQuestion.java       # Queue practice: non-repeating chars, interleave, reverse
 
-- ✅ Daily-added Java code for algorithms
-- ✅ Problem statements with solutions
-- ✅ Concepts explained through code
-- ✅ Optimized and beginner-friendly examples
-
----
-
-## 🗂️ Folder Structure
-
-├── AllSortingTechnique/        # Implements various sorting algorithms
-├── AssimentQuestion/           # Sample assignment-style problems
-├── inportantQue/              # Important question practice sets
-├── Arrays.java                # Array manipulation examples
-├── BinarySearch.java          # Binary search implementation
-├── Matrix.java                # Matrix operations (add, multiply, transpose, etc.)
-├── Patterns.java              # ASCII-art pattern printing
-├── StringClass.java           # String handling examples
-├── SubArrays.java             # Working with subarrays
-├── function.java              # Basic function usage
-├── functionPracticeSet.java   # Function practice exercises
-├── loops.java                 # Examples of loops (for, while)
-└── tempCodeRunnerFile.java    # Testing ground for miscellaneous snippets
+## Notable files
+- AllSortingTechnique/MargeLinkedList.java
+  - Merge sort on linked list, find-mid, zig-zag reorder.
+- StackWithArrayList.java
+  - Simple stack built on `ArrayList<Integer>` with push/pop/peek.
+- QueueImpQuestion.java
+  - Print first non-repeating char stream, interleave queue, reverse queue.
 
 
 
-## 💻 How to Use
+## Common issues & quick fixes
+- "The type Queue is not generic" — caused by a local `Queue` class shadowing `java.util.Queue`. Fix by:
+  - Renaming your custom `Queue` class or
+  - Using fully-qualified types (`java.util.Queue`) or
+  - Putting your custom class in a package.
+- If IDE shows stale errors: clean build or delete `.class` files and recompile.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/dilkhush05/java
-   cd java
+## Contributing
+- Add new problems or algorithms in appropriate folders.
+- Use descriptive filenames and include a short comment at file top about the purpose.
+- Prefer small, focused commits.
+
+## Notes
+- Files are mostly in the default (unnamed) package — consider adding packages for larger refactors.
+- If you want, I can:
+  - Add a CONTRIBUTING.md template,
+  - Convert code to use packages,
+  - Add simple unit tests or build automation (e.g., Ant, Maven, Gradle).
